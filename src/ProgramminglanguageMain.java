@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Main {
+public class ProgramminglanguageMain {
     public static void main(String[] args) {
 
         List<Programminglanguage> languages = new ArrayList<>();
@@ -20,7 +20,7 @@ public class Main {
         languages.add(new Programminglanguage
                 ("Fortran", "John Backus", LocalDate.of(1957, 1, 1)));
 
-        System.out.println("Все языки из списка:");
+        System.out.println("\nВсе языки из списка:");
         languages.forEach(System.out::println);
 
         Programminglanguage oldestLanguage = languages.stream()
@@ -28,7 +28,7 @@ public class Main {
                 .orElse(null);
 
         if (oldestLanguage != null) {
-            System.out.println("Самый старый язык программирования: " + oldestLanguage);
+            System.out.println("\nСамый старый язык программирования:\n" + oldestLanguage);
         } else {
             System.out.println("Список языков программирования пуст.");
         }
