@@ -8,17 +8,17 @@ public class PackageMain {
     public static void main(String[] args) {
 
         ZonedDateTime nowNewYork = ZonedDateTime.now(ZoneId.of("America/New_York"));
-        ZonedDateTime nowTokyo = ZonedDateTime.now(ZoneId.of("Asia/Tokyo")).minusMinutes(5);
-        ZonedDateTime nowLondon = ZonedDateTime.now(ZoneId.of("Europe/London")).minusMinutes(10);
-        ZonedDateTime nowMoscow = ZonedDateTime.now(ZoneId.of("Europe/Moscow")).minusMinutes(15);
-        ZonedDateTime nowSydney = ZonedDateTime.now(ZoneId.of("Australia/Sydney")).minusMinutes(20);
+        ZonedDateTime nowTokyo = ZonedDateTime.now(ZoneId.of("Asia/Tokyo"));
+        ZonedDateTime nowLondon = ZonedDateTime.now(ZoneId.of("Europe/London"));
+        ZonedDateTime nowMoscow = ZonedDateTime.now(ZoneId.of("Europe/Moscow"));
+        ZonedDateTime nowSydney = ZonedDateTime.now(ZoneId.of("Australia/Sydney"));
 
         List<Package> packages = new ArrayList<>();
-        packages.add(new Package("New York", "Berlin", 2.5, nowNewYork));
-        packages.add(new Package("Tokyo", "Berlin", 1.2, nowTokyo));
-        packages.add(new Package("London", "Berlin", 3.0, nowLondon));
-        packages.add(new Package("Moscow", "Berlin", 1.5, nowMoscow));
-        packages.add(new Package("Sydney", "Berlin", 4.0, nowSydney));
+        packages.add(new Package("New York", "Berlin", 2.5, nowNewYork.minusMinutes(5)));
+        packages.add(new Package("Tokyo", "Berlin", 1.2, nowTokyo.minusMinutes(5)));
+        packages.add(new Package("London", "Berlin", 3.0, nowLondon.minusMinutes(10)));
+        packages.add(new Package("Moscow", "Berlin", 1.5, nowMoscow.minusMinutes(15)));
+        packages.add(new Package("Sydney", "Berlin", 4.0, nowSydney.minusMinutes(5)));
 
         System.out.println("\nВсе посылки из списка:");
         packages.forEach(System.out::println);
