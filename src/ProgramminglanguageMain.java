@@ -3,7 +3,15 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Класс ProgramminglanguageMain - класс,
+ * <p>
+ * который инициализирует список языков программирования,
+ * <p>
+ * выводит их на экран и определяет самый старый язык по дате его первой версии.
+ */
 public class ProgramminglanguageMain {
+
     public static void main(String[] args) {
 
         List<Programminglanguage> languages = new ArrayList<>();
