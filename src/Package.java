@@ -22,7 +22,7 @@ public class Package {
 
     @Override
     public String toString() {
-        return "Package1{" +
+        return "Package{" +
                 "departureCity='" + departureCity + '\'' +
                 ", cityOfReceipt='" + cityOfReceipt + '\'' +
                 ", weight=" + weight +
@@ -34,11 +34,11 @@ public class Package {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Package package1 = (Package) o;
-        return Double.compare(weight, package1.weight) == 0
-                && Objects.equals(departureCity, package1.departureCity)
-                && Objects.equals(cityOfReceipt, package1.cityOfReceipt)
-                && Objects.equals(creationDateTime, package1.creationDateTime);
+        Package aPackage = (Package) o;
+        return Double.compare(weight, aPackage.weight) == 0
+                && Objects.equals(departureCity, aPackage.departureCity)
+                && Objects.equals(cityOfReceipt, aPackage.cityOfReceipt)
+                && Objects.equals(creationDateTime, aPackage.creationDateTime);
     }
 
     @Override
