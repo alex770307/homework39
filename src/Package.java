@@ -46,7 +46,35 @@ public class Package {
         return Objects.hash(departureCity, cityOfReceipt, weight, creationDateTime);
     }
 
+    public String getDepartureCity() {
+        return departureCity;
+    }
+
+    public void setDepartureCity(String departureCity) {
+        this.departureCity = departureCity;
+    }
+
     public String getCityOfReceipt() {
         return cityOfReceipt;
+    }
+
+    public void setCityOfReceipt(String cityOfReceipt) {
+        this.cityOfReceipt = cityOfReceipt;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public ZonedDateTime getCreationDateTime() {
+        return creationDateTime;
+    }
+
+    public void setCreationDateTime(ZonedDateTime creationDateTime) {
+        this.creationDateTime = creationDateTime;
     }
 }

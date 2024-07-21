@@ -35,10 +35,13 @@ public class ProgramminglanguageMain {
                 .min(Comparator.comparing(Programminglanguage::getDateOfFirstVersion))
                 .orElse(null);
 
-        if (oldestLanguage != null) {
+        try {
+            if (oldestLanguage == null) {
+                throw new Exception("Список языков программирования пуст.");
+            }
             System.out.println("\nСамый старый язык программирования:\n" + oldestLanguage);
-        } else {
-            System.out.println("Список языков программирования пуст.");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
