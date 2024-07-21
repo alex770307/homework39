@@ -36,7 +36,27 @@ public class Programminglanguage {
         return Objects.hash(name, author, dateOfFirstVersion);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public LocalDate getDateOfFirstVersion() {
         return dateOfFirstVersion;
+    }
+
+    public void setDateOfFirstVersion(LocalDate dateOfFirstVersion) {
+        this.dateOfFirstVersion = dateOfFirstVersion;
     }
 }
