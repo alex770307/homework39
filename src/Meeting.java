@@ -15,8 +15,8 @@ public class Meeting {
     @Override
     public String toString() {
         return "Meeting{" +
-                "participant1='" + firstParticipant + '\'' +
-                ", participant2='" + secondParticipant + '\'' +
+                "firstParticipant='" + firstParticipant + '\'' +
+                ", secondParticipant='" + secondParticipant + '\'' +
                 ", startDateTime=" + startDateTime +
                 '}';
     }
