@@ -14,6 +14,8 @@ import java.util.List;
  */
 public class PackageMain {
 
+    private static final String BERLIN = "Berlin";
+
     public static void main(String[] args) {
 
         List<Package> packages = new ArrayList<>();
@@ -40,7 +42,7 @@ public class PackageMain {
         packages.forEach(System.out::println);
 
         Package latestPackageToBerlin = packages.stream()
-                .filter(pkg -> pkg.getCityOfReceipt().equalsIgnoreCase("Berlin"))
+                .filter(pkg -> pkg.getCityOfReceipt().equalsIgnoreCase(BERLIN))
                 .max(Comparator.comparing(Package::getCreationDateTimeInUTC))
                 .orElse(null);
 
